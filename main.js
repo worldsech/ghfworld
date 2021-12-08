@@ -6,7 +6,7 @@ const realFileBtn = document.getElementById('real-file')
 const uploadBtn = document.getElementById('upload-btn')
 
 const edit = new Image() //main graphic image
-edit.src = 'Meme png.png'
+edit.src = 'Group4.png'
 edit.onload = function (){
     drawImg()
 }
@@ -14,9 +14,9 @@ edit.onload = function (){
 function drawImg(x,y,w,h,c){
     ctx.drawImage(edit, 0, 0, canvas.width, canvas.height )
     ctx.font = '18px aria'
-    ctx.fillStyle = '#ffde00'
+    ctx.fillStyle = '#ffffff'
     ctx.textAline= "center"
-    ctx.fillText( nameInput.value, 57, 377)
+    ctx.fillText( nameInput.value, 400, 294)
     //ctx.drawImage(great, 20,40)
 
 }
@@ -28,7 +28,7 @@ nameInput.addEventListener('input', function(){
 
 downloadBtn.addEventListener('click', function(){ //download function
     downloadBtn.href = canvas.toDataURL('image/jpeg')
-    downloadBtn.download = 'DP '+ nameInput.value
+    downloadBtn.download = 'Grateful '+ nameInput.value
 })
 
 
@@ -40,7 +40,7 @@ function readImage(inputFile){
        var previewImage = new Image();
       previewImage.src = e.target.result;
       previewImage.onload = function(){
-        ctx.drawImage(previewImage,(0.128*canvas.width),(0.223*canvas.height),(0.38*canvas.width), (0.502*canvas.height));
+        ctx.drawImage(previewImage,(0.011*canvas.width),(0.202*canvas.height),(0.550*canvas.width), (0.502*canvas.height));
       }     
     }
     
